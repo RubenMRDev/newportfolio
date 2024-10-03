@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #090F16;
+    margin: 0; /* Sin margen en el cuerpo */
+    padding: 0; /* Sin relleno en el cuerpo */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+header {
+    position: sticky; /* Hacer que el header sea sticky */
+    top: 0; /* Posicionar el header en la parte superior */
+    background-color: #090F16; /* Asegúrate de que el fondo sea el mismo que el del body */
+    z-index: 1000; /* Asegurarse de que el header esté por encima de otros elementos */
+}
+
+
+.nav-bar {
+    background-color: #F3F34D;
+    padding: 20px 40px;
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+a, a:visited, a:link {
+    text-decoration: none;
+    color: #27013C;
+
+    padding: 10px 15px; /* Espacio interno en los enlaces */
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-text {
+    padding-top: 40px;
+    text-align: center;
+    line-height: 0;
+    color: #F3F34D;
+}
+
+.main-text-section-top {
+    font-size: 35px;
+    letter-spacing: 3px;
+}
+
+.main-text-section-bottom {
+    font-size: 20px;
+}
+
+.main-text-color {
+    color: rgb(255, 255, 255);
+}
+
+main img {
+    border-radius: 360%;
+    width: 200px;
+}
+
+.aboutme-section {
+    text-align: center; /* Centrar el contenido */
+    margin: 15em 0;    /* Espacio superior e inferior */
+    color: #F3F34D;
+}
+
+.aboutme-header {
+    display: flex; /* Usar flexbox para las líneas */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+}
+
+.aboutme-header h5 {
+    margin: 0 20px; /* Espacio entre el texto y las líneas */
+}
+
+.aboutme-header::before,
+.aboutme-header::after {
+    content: ""; /* Crear un contenido vacío para las líneas */
+    flex: 1; /* Las líneas ocuparán espacio disponible */
+    border-top: 1px solid #F3F34D; /* Línea superior */
+    margin: 0 10px; /* Espacio alrededor de las líneas */
+}
+
+@media (max-width: 500px) {
+    nav {
+        flex-direction: column; /* Cambiar a columna */
+        align-items: center; /* Centrar los enlaces */
+        width: 100%; /* Asegurarse de que el nav ocupe todo el ancho */
+        padding: 0; /* Sin padding adicional */
+    }
+
+    .nav-bar {
+        width: 100%; /* Asegurarse de que la barra de navegación ocupe todo el ancho */
+        padding: 0; /* Sin padding adicional */
+    }
+
+    a {
+        margin: 10px 0; /* Espacio vertical entre enlaces */
+        display: block; /* Hacer que los enlaces se comporten como bloques */
+        width: 100%; /* Hacer que los enlaces ocupen todo el ancho */
+        text-align: center; /* Centrar el texto del enlace */
+        padding: 10px 0; /* Espaciado interno para enlaces */
+    }
+}
